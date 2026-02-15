@@ -1,13 +1,9 @@
 @use "_variables.scss" as *;
 @use "_mixins.scss" as *;
 
-body {
-  padding: 0;
-  margin: 0;
-}
-
-.header-top-section {
-  background-color: $bg-color;
+.header-top {
+  background-color: $theme-color;
+  position: relative;
 
   .container-fluid {
     padding: 0 120px;
@@ -20,39 +16,38 @@ body {
       display: none;
     }
   }
-}
 
-.header-top-wrapper {
+  &.header-inner {
+    &::before {
+      display: none;
+    }
+  }
+}
+.header-top-inner {
   @include flex;
   justify-content: space-between;
+  padding: 10px 0;
 
-  .icon-items {
-    @include flex;
-    gap: 10px;
-    border-right: 1px solid #d9d9d9;
-    padding-right: 135px;
-    height: 90px;
+  .header-left {
+    .list-icon {
+      @include flex;
+      gap: 60px;
 
-    @include breakpoint(max-xxl) {
-      border-right: none;
-      padding-right: 0;
-      height: initial;
-    }
+      li {
+        @include flex;
+        font-size: 14px;
+        font-weight: 400;
+        color: $white;
+        // font-family: $heading-font;
 
-    .icon {
-      width: 50px;
-      height: 50px;
-      line-height: 50px;
-      text-align: center;
-      border: 1px solid $theme-color-2;
-      color: $theme-color-2;
-      border-radius: 100%;
-      @include transition;
+        svg {
+          color: $white;
+          margin-right: 8px;
+        }
 
-      &:hover {
-        color: $theme-color-2;
-        background-color: $theme-color;
-        border: 1px solid $theme-color;
+        a {
+          color: $white;
+        }
       }
     }
   }
@@ -62,11 +57,12 @@ body {
     gap: 20px;
 
     a {
-      font-size: 20px;
-      color: $theme-color-2;
-      border: 1px solid $theme-color-2;
-      width: 40px;
-      height: 40px;
+      // font-size: 20px;
+      // color: $theme-color;
+      border: 1px solid $theme-color;
+      background-color: #f9fafb10;
+      width: 45px;
+      height: 45px;
       line-height: 40px;
       text-align: center;
       display: inline-block;
@@ -79,8 +75,13 @@ body {
       }
     }
   }
-}
 
+  &.inner {
+    .header-left {
+      margin-left: 0;
+    }
+  }
+}
 //>>>>> Header Main Start <<<<<//
 .menu-thumb {
   @include breakpoint(max-xl) {
@@ -115,14 +116,16 @@ body {
         a {
           display: inline-block;
           font-size: 16px;
-          font-weight: 600;
-          color: $theme-color-2;
+          font-weight: 500;
+          color: $text-color;
           padding: 20px 0;
           text-align: left;
           position: relative;
-          text-transform: capitalize;
+          text-transform: uppercase;
           @include transition;
-
+          @include breakpoint(max-xxl) {
+            color: $white;
+          }
           i {
             margin-left: 4px;
             font-size: 14px;
@@ -376,7 +379,7 @@ body {
 
         &:hover {
           > a {
-            color: $theme-color-2;
+            color: $theme-color;
 
             &::after {
               color: $theme-color;
@@ -399,20 +402,20 @@ body {
       gap: 20px;
     }
 
-    .search-toggler {
-      width: 40px;
-      height: 40px;
-      line-height: 40px;
-      text-align: center;
-      color: $theme-color-2;
-      border-radius: 100px;
-      border: 1px solid $theme-color-2;
-      font-size: 16px;
+    // .search-toggler {
+    //   width: 40px;
+    //   height: 40px;
+    //   line-height: 40px;
+    //   text-align: center;
+    //   color: $theme-color-2;
+    //   border-radius: 100px;
+    //   border: 1px solid $theme-color-2;
+    //   font-size: 16px;
 
-      @include breakpoint(max-sm) {
-        display: none;
-      }
-    }
+    //   @include breakpoint(max-sm) {
+    //     display: none;
+    //   }
+    // }
 
     .header-button {
       @include breakpoint(max-xxl) {
@@ -420,11 +423,11 @@ body {
       }
       .theme-btn {
         &::before {
-          background-color: $white;
+          background-color: $theme-color;
         }
 
         &:hover {
-          color: $header-color;
+          color: $white;
         }
       }
     }
@@ -438,7 +441,7 @@ body {
 }
 
 .header-1 {
-  background-color: $theme-color;
+  background-color: $white;
 
   .container-fluid {
     padding: 0 120px;
@@ -449,10 +452,38 @@ body {
 
     @include breakpoint(max-xxl) {
       padding: 0 30px;
+      background-color: $theme-color;
     }
 
     @include breakpoint(max-sm) {
       padding: 0 15px;
+    }
+  }
+
+  .header-main {
+    .header-left {
+      .logo-blue {
+        display: none;
+      }
+
+      .logo {
+        @include breakpoint(max-xxl) {
+          .logo-white {
+            display: none;
+          }
+          .logo-blue {
+            display: block;
+          }
+        }
+
+        .header-logo-2 {
+          display: none;
+
+          @include breakpoint(max-xxl) {
+            display: block;
+          }
+        }
+      }
     }
   }
 
@@ -521,3 +552,241 @@ body {
 }
 
 //>>>>> Header 01 Start <<<<<//
+
+//>>>>> Sticky Start <<<<</
+.sticky {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0;
+  width: 100%;
+  z-index: 99999;
+  transition: all 0.9s;
+  background-color: $white;
+  -webkit-animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
+  animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+  &.header-1 {
+    .header-main {
+      .header-right {
+        .header-button {
+          .theme-btn {
+            &::before {
+              background-color: $theme-color;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.header-2 {
+    &::before {
+      display: none;
+    }
+
+    .header-main {
+      .header-left {
+        .logo {
+          .header-logo {
+            display: none;
+          }
+          .header-logo-2 {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+
+  &.header-3 {
+    background-color: $white !important;
+
+    .header-main {
+      .header-left {
+        .logo {
+          .header-logo {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
+//>>>>> Offcanvas Start <<<<<//
+
+.offcanvas__info {
+  background: $white none repeat scroll 0 0;
+  border-left: 2px solid $theme-color;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 450px;
+  height: 100%;
+  -webkit-transform: translateX(calc(100% + 80px));
+  -moz-transform: translateX(calc(100% + 80px));
+  -ms-transform: translateX(calc(100% + 80px));
+  -o-transform: translateX(calc(100% + 80px));
+  transform: translateX(calc(100% + 80px));
+  -webkit-transition:
+    transform 0.45s ease-in-out,
+    opacity 0.45s ease-in-out;
+  -moz-transition:
+    transform 0.45s ease-in-out,
+    opacity 0.45s ease-in-out;
+  transition:
+    transform 0.45s ease-in-out,
+    opacity 0.45s ease-in-out;
+  z-index: 9999999;
+  overflow-y: scroll;
+  overscroll-behavior-y: contain;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.offcanvas__info.info-open {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  transform: translateX(0);
+}
+
+.offcanvas__wrapper {
+  position: relative;
+  height: 100%;
+  padding: 30px 30px;
+
+  .offcanvas__content {
+    .text {
+      color: $black;
+    }
+
+    .offcanvas__close {
+      width: 45px;
+      height: 45px;
+      line-height: 45px;
+      text-align: center;
+      border-radius: 50%;
+      background-color: $theme-color;
+      position: relative;
+      z-index: 9;
+      cursor: pointer;
+
+      i {
+        color: $theme-color-2;
+      }
+    }
+
+    .offcanvas__contact {
+      margin-top: 20px;
+
+      h4 {
+        margin-bottom: 20px;
+      }
+
+      ul {
+        margin-top: 0;
+
+        li {
+          font-size: 20px;
+          font-weight: 600;
+          text-transform: capitalize;
+
+          @include breakpoint(max-sm) {
+            font-size: 14px;
+          }
+
+          &:not(:last-child) {
+            margin-bottom: 30px;
+
+            @include breakpoint(max-sm) {
+              margin-bottom: 20px;
+            }
+          }
+
+          a {
+            color: $black;
+          }
+          .offcanvas__contact-icon {
+            margin-right: 20px;
+
+            i {
+              color: $theme-color;
+            }
+          }
+        }
+      }
+
+      span {
+        text-transform: initial;
+      }
+
+      .header-button {
+        .theme-btn {
+          width: 100%;
+          padding: 20px 40px;
+          text-transform: capitalize !important;
+        }
+      }
+
+      .social-icon {
+        margin-top: 30px;
+        gap: 10px;
+
+        a {
+          width: 45px;
+          height: 45px;
+          line-height: 45px;
+          border-radius: 100%;
+          text-align: center;
+          font-size: 16px;
+          display: block;
+          background: transparent;
+          color: #000;
+          -webkit-transition: all 0.4s ease-in-out;
+          transition: all 0.4s ease-in-out;
+          text-align: center;
+          border: 1px solid $border-color;
+
+          &:hover {
+            background-color: $theme-color;
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+}
+
+.offcanvas__overlay {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background: #151515;
+  z-index: 900;
+  top: 0;
+  opacity: 0;
+  visibility: hidden;
+  right: 0;
+}
+
+.offcanvas__overlay.overlay-open {
+  opacity: 0.8;
+  visibility: visible;
+}
+
+@media (max-width: 450px) {
+  .offcanvas__info {
+    width: 300px;
+  }
+}
+
+@media (max-width: 575px) {
+  .offcanvas__wrapper {
+    padding: 20px;
+  }
+}
