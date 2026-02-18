@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Finora Capital</title>
+    <link rel="shortcut icon" href="assets/images/finora-logo-white.svg" />
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
     <link rel="stylesheet" href="./assets/dist/css/main.css" />
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
@@ -59,86 +60,6 @@
       </div>
     </div>
 
-    <!-- Offcanvas Area Start -->
-    <div class="fix-area">
-      <div class="offcanvas__info">
-        <div class="offcanvas__wrapper">
-          <div class="offcanvas__content">
-            <div
-              class="offcanvas__top mb-5 d-flex justify-content-between align-items-center"
-            >
-              <div class="offcanvas__logo">
-                <a href="index.html">
-                  <img src="assets/img/logo/black-logo.svg" alt="logo-img" />
-                </a>
-              </div>
-              <div class="offcanvas__close">
-                <button>
-                  <i class="fas fa-times"></i>
-                </button>
-              </div>
-            </div>
-            <p class="text d-none d-xl-block">
-              Nullam dignissim, ante scelerisque the is euismod fermentum odio
-              sem semper the is erat, a feugiat leo urna eget eros. Duis Aenean
-              a imperdiet risus.
-            </p>
-            <div class="mobile-menu fix mb-3"></div>
-            <div class="offcanvas__contact d-xl-block">
-              <h4 class="d-xl-block">Contact Info</h4>
-              <ul class="d-xl-block">
-                <li class="d-flex align-items-center">
-                  <div class="offcanvas__contact-icon">
-                    <i class="fal fa-map-marker-alt"></i>
-                  </div>
-                  <div class="offcanvas__contact-text">
-                    <a target="_blank" href="#"
-                      >Main Street, Melbourne, Australia</a
-                    >
-                  </div>
-                </li>
-                <li class="d-flex align-items-center">
-                  <div class="offcanvas__contact-icon mr-15">
-                    <i class="fal fa-envelope"></i>
-                  </div>
-                  <div class="offcanvas__contact-text">
-                    <a href="mailto:info@example.com"
-                      ><span class="mailto:info@example.com"
-                        >info@example.com</span
-                      ></a
-                    >
-                  </div>
-                </li>
-                <li class="d-flex align-items-center">
-                  <div class="offcanvas__contact-icon mr-15">
-                    <i class="fal fa-clock"></i>
-                  </div>
-                  <div class="offcanvas__contact-text">
-                    <a target="_blank" href="#">Mod-friday, 09am -05pm</a>
-                  </div>
-                </li>
-                <li class="d-flex align-items-center">
-                  <div class="offcanvas__contact-icon mr-15">
-                    <i class="far fa-phone"></i>
-                  </div>
-                  <div class="offcanvas__contact-text">
-                    <a href="tel:+11002345909">+11002345909</a>
-                  </div>
-                </li>
-              </ul>
-              <div class="social-icon d-flex align-items-center">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-youtube"></i></a>
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="offcanvas__overlay"></div>
-
     <!-- Header Section Start -->
     <header id="header-sticky" class="header-1">
       <div class="container-fluid">
@@ -161,7 +82,7 @@
               </div>
             </div>
             <div class="main-menu d-none d-xl-block">
-              <nav id="mobile-menu">
+              <nav>
                 <ul>
                   <li class="has-dropdown active menu-thumb">
                     <a href="index.html"> Home </a>
@@ -223,14 +144,14 @@
                       </li>
                     </ul>
                   </li>
-                  <li class="has-dropdown active d-xl-none">
+                  <!-- <li class="has-dropdown active d-xl-none">
                     <a href="index.html" class="border-none"> Home </a>
                     <ul class="submenu">
                       <li><a href="index.html">Home 01</a></li>
                       <li><a href="index-2.html">Home 02</a></li>
                       <li><a href="index-3.html">MHome 03</a></li>
                     </ul>
-                  </li>
+                  </li> -->
                   <li>
                     <a href="about.html">About Us</a>
                   </li>
@@ -318,18 +239,337 @@
             <div
               class="header-right d-flex justify-content-end align-items-center"
             >
-              <!-- <a href="#" class="main-header__search search-toggler">
-                <i class="fa-regular fa-magnifying-glass"></i>
-              </a> -->
               <div class="header-button">
                 <a href="donation-details.html" class="theme-btn"> SIGN UP </a>
               </div>
               <div class="header__hamburger d-xl-none my-auto">
                 <div class="sidebar__toggle">
-                  <!-- <i class="fas fa-bars"></i> -->
-                  <svg class="icon" width="24" height="24">
-                    <use xlink:href="assets/icons/hamburger.svg"></use>
-                  </svg>
+                  <!-- Hamburger Trigger -->
+                  <button
+                    class="btn d-xl-none"
+                    type="button"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#mobileOffcanvas"
+                  >
+                    <svg class="icon" width="24" height="24">
+                      <use xlink:href="assets/icons/hamburger.svg"></use>
+                    </svg>
+                  </button>
+
+                  <!-- Bootstrap Offcanvas for Mobile -->
+                  <div
+                    class="offcanvas offcanvas-end d-xl-none"
+                    tabindex="-1"
+                    id="mobileOffcanvas"
+                  >
+                    <div class="offcanvas-header">
+                      <a href="index.html">
+                        <img
+                          src="assets/images/finora-logo-white.svg"
+                          alt="logo"
+                        />
+                      </a>
+                      <!-- <button
+                        type="button"
+                        class="btn-close text-reset"
+                        data-bs-dismiss="offcanvas"
+                      ></button> -->
+                      <button
+                        type="button"
+                        class="custom-close"
+                        data-bs-dismiss="offcanvas"
+                        aria-label="Close"
+                      >
+                        <img src="assets/icons/ex.svg" alt="close" />
+                      </button>
+                    </div>
+
+                    <div class="offcanvas-body">
+                      <ul class="navbar-nav">
+                        <!-- Home -->
+                        <li class="nav-item dropdown">
+                          <a
+                            class="nav-link active"
+                            data-bs-toggle="collapse"
+                            href="#homeCollapse"
+                            role="button"
+                            aria-expanded="false"
+                          >
+                            <img
+                              class="nav-icon"
+                              src="assets/icons/home.svg"
+                              alt="close"
+                            />
+                            Home
+                            <img
+                              class="chevron-down"
+                              src="assets/icons/chevron-down.svg"
+                              alt="close"
+                            />
+                          </a>
+
+                          <div class="collapse" id="homeCollapse">
+                            <ul class="navbar-nav ps-3">
+                              <li class="nav-item">
+                                <a href="index.html" class="nav-link"
+                                  >Home 01</a
+                                >
+                              </li>
+                              <li class="nav-item">
+                                <a href="index-2.html" class="nav-link"
+                                  >Home 02</a
+                                >
+                              </li>
+                              <li class="nav-item">
+                                <a href="index-3.html" class="nav-link"
+                                  >Home 03</a
+                                >
+                              </li>
+                            </ul>
+                          </div>
+                        </li>
+
+                        <!-- About -->
+                        <li class="nav-item">
+                          <a href="about.html" class="nav-link">
+                            <img
+                              class="nav-icon"
+                              src="assets/icons/briefcase.svg"
+                              alt="close"
+                            />
+                            About Us</a
+                          >
+                        </li>
+
+                        <!-- Pages -->
+                        <li class="nav-item">
+                          <a
+                            class="nav-link"
+                            data-bs-toggle="collapse"
+                            href="#pagesCollapse"
+                            role="button"
+                            aria-expanded="false"
+                          >
+                            <img
+                              class="nav-icon"
+                              src="assets/icons/pages.svg"
+                              alt="close"
+                            />
+                            Pages
+                            <img
+                              class="chevron-down"
+                              src="assets/icons/chevron-down.svg"
+                              alt="close"
+                            />
+                          </a>
+                          <div class="collapse" id="pagesCollapse">
+                            <ul class="navbar-nav ps-3">
+                              <!-- Cause -->
+                              <li class="nav-item">
+                                <a
+                                  class="nav-link"
+                                  data-bs-toggle="collapse"
+                                  href="#causeCollapse"
+                                  role="button"
+                                  aria-expanded="false"
+                                >
+                                  Cause <i class="fas fa-angle-down"></i>
+                                </a>
+                                <div class="collapse" id="causeCollapse">
+                                  <ul class="navbar-nav ps-3">
+                                    <li class="nav-item">
+                                      <a href="project.html" class="nav-link"
+                                        >Our Cause</a
+                                      >
+                                    </li>
+                                    <li class="nav-item">
+                                      <a
+                                        href="project-details.html"
+                                        class="nav-link"
+                                        >Cause Details</a
+                                      >
+                                    </li>
+                                  </ul>
+                                </div>
+                              </li>
+
+                              <!-- Volunteer -->
+                              <li class="nav-item">
+                                <a
+                                  class="nav-link"
+                                  data-bs-toggle="collapse"
+                                  href="#volunteerCollapse"
+                                  role="button"
+                                  aria-expanded="false"
+                                >
+                                  Volunteer <i class="fas fa-angle-down"></i>
+                                </a>
+                                <div class="collapse" id="volunteerCollapse">
+                                  <ul class="navbar-nav ps-3">
+                                    <li class="nav-item">
+                                      <a
+                                        href="become-volounteer.html"
+                                        class="nav-link"
+                                        >Become Volunteer</a
+                                      >
+                                    </li>
+                                    <li class="nav-item">
+                                      <a href="volounteer.html" class="nav-link"
+                                        >Volunteer</a
+                                      >
+                                    </li>
+                                    <li class="nav-item">
+                                      <a
+                                        href="volounteer-details.html"
+                                        class="nav-link"
+                                        >Volunteer Details</a
+                                      >
+                                    </li>
+                                  </ul>
+                                </div>
+                              </li>
+
+                              <!-- Event -->
+                              <li class="nav-item">
+                                <a
+                                  class="nav-link"
+                                  data-bs-toggle="collapse"
+                                  href="#eventCollapse"
+                                  role="button"
+                                  aria-expanded="false"
+                                >
+                                  Event <i class="fas fa-angle-down"></i>
+                                </a>
+                                <div class="collapse" id="eventCollapse">
+                                  <ul class="navbar-nav ps-3">
+                                    <li class="nav-item">
+                                      <a href="event.html" class="nav-link"
+                                        >Our Event</a
+                                      >
+                                    </li>
+                                    <li class="nav-item">
+                                      <a href="event-list.html" class="nav-link"
+                                        >Event List</a
+                                      >
+                                    </li>
+                                    <li class="nav-item">
+                                      <a
+                                        href="event-details.html"
+                                        class="nav-link"
+                                        >Event Details</a
+                                      >
+                                    </li>
+                                  </ul>
+                                </div>
+                              </li>
+
+                              <!-- Donation -->
+                              <li class="nav-item">
+                                <a
+                                  class="nav-link"
+                                  data-bs-toggle="collapse"
+                                  href="#donationCollapse"
+                                  role="button"
+                                  aria-expanded="false"
+                                >
+                                  Donation <i class="fas fa-angle-down"></i>
+                                </a>
+                                <div class="collapse" id="donationCollapse">
+                                  <ul class="navbar-nav ps-3">
+                                    <li class="nav-item">
+                                      <a href="donation.html" class="nav-link"
+                                        >Our Donation</a
+                                      >
+                                    </li>
+                                    <li class="nav-item">
+                                      <a
+                                        href="donation-now.html"
+                                        class="nav-link"
+                                        >Donation Now</a
+                                      >
+                                    </li>
+                                    <li class="nav-item">
+                                      <a
+                                        href="donation-details.html"
+                                        class="nav-link"
+                                        >Donation Details</a
+                                      >
+                                    </li>
+                                  </ul>
+                                </div>
+                              </li>
+
+                              <!-- Other Pages -->
+                              <li class="nav-item">
+                                <a href="pricing.html" class="nav-link"
+                                  >Our Pricing</a
+                                >
+                              </li>
+                              <li class="nav-item">
+                                <a href="faq.html" class="nav-link">FAQ</a>
+                              </li>
+                              <li class="nav-item">
+                                <a href="404.html" class="nav-link">404 Page</a>
+                              </li>
+                            </ul>
+                          </div>
+                        </li>
+
+                        <!-- Blog -->
+                        <li class="nav-item">
+                          <a
+                            class="nav-link"
+                            data-bs-toggle="collapse"
+                            href="#blogCollapse"
+                            role="button"
+                            aria-expanded="false"
+                          >
+                            <img
+                              class="nav-icon"
+                              src="assets/icons/blog.svg"
+                              alt="close"
+                            />
+                            Blog
+                            <img
+                              class="chevron-down"
+                              src="assets/icons/chevron-down.svg"
+                              alt="close"
+                            />
+                          </a>
+                          <div class="collapse" id="blogCollapse">
+                            <ul class="navbar-nav ps-3">
+                              <li class="nav-item">
+                                <a href="news-grid.html" class="nav-link"
+                                  >Blog Grid</a
+                                >
+                              </li>
+                              <li class="nav-item">
+                                <a href="news.html" class="nav-link"
+                                  >Blog Standard</a
+                                >
+                              </li>
+                              <li class="nav-item">
+                                <a href="news-details.html" class="nav-link"
+                                  >Blog Details</a
+                                >
+                              </li>
+                            </ul>
+                          </div>
+                        </li>
+
+                        <!-- Contact -->
+                        <li class="nav-item">
+                          <a href="contact.html" class="nav-link">
+                            <img
+                              class="nav-icon"
+                              src="assets/icons/contact.svg"
+                              alt="close"
+                            />Contact Us</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -491,6 +731,7 @@
     <script src="assets/js/jquery-3.7.1.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/swiper-bundle.min.js"></script>
+
     <script src="assets/js/main.js"></script>
   </body>
 </html>

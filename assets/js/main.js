@@ -6,10 +6,11 @@
 
   $documentOn.ready(function () {
     // Clone main menu into mobile menu
-    if ($("#mobile-menu").length) {
-      let mobileMenuContent = $("#mobile-menu").html();
-      $(".mobile-menu").html(mobileMenuContent);
-    }
+    // if ($("#mobile-menu").length) {
+    //   let mobileMenuContent = $("#mobile-menu").html();
+    //   $(".mobile-menu").html(mobileMenuContent);
+    // }
+
     //>> Sidebar Toggle Js Start <<//
     $(".offcanvas__close,.offcanvas__overlay").on("click", function () {
       $(".offcanvas__info").removeClass("info-open");
@@ -18,13 +19,6 @@
     $(".sidebar__toggle").on("click", function () {
       $(".offcanvas__info").addClass("info-open");
       $(".offcanvas__overlay").addClass("overlay-open");
-    });
-
-    //>> Body Overlay Js Start <<//
-    $(".body-overlay").on("click", function () {
-      $(".offcanvas__area").removeClass("offcanvas-opened");
-      $(".df-search-area").removeClass("opened");
-      $(".body-overlay").removeClass("opened");
     });
 
     if ($(".hero-slider").length) {

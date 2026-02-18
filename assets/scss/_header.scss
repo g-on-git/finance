@@ -1,4 +1,5 @@
 @use "_variables.scss" as *;
+@use "_typography.scss" as *;
 @use "_mixins.scss" as *;
 
 .header-top {
@@ -402,21 +403,6 @@
       gap: 20px;
     }
 
-    // .search-toggler {
-    //   width: 40px;
-    //   height: 40px;
-    //   line-height: 40px;
-    //   text-align: center;
-    //   color: $theme-color-2;
-    //   border-radius: 100px;
-    //   border: 1px solid $theme-color-2;
-    //   font-size: 16px;
-
-    //   @include breakpoint(max-sm) {
-    //     display: none;
-    //   }
-    // }
-
     .header-button {
       @include breakpoint(max-xxl) {
         display: none;
@@ -436,6 +422,43 @@
       cursor: pointer;
       font-size: 20px;
       color: $header-color;
+
+      .offcanvas {
+        .offcanvas-header {
+          .custom-close {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            background: transparent;
+            border: 0.2px solid $theme-color-2;
+          }
+        }
+        .offcanvas-body {
+          ul li {
+            padding: 10px;
+            border-bottom: 1px solid $bg-color-2;
+            position: relative;
+
+            a {
+              .chevron-down {
+                position: absolute;
+                right: 0;
+              }
+              .nav-icon {
+                width: 24px;
+                vertical-align: text-top;
+              }
+            }
+          }
+        }
+
+        .collapse {
+          ul li {
+            border: 0;
+          }
+        }
+      }
     }
   }
 }
@@ -777,6 +800,29 @@
 .offcanvas__overlay.overlay-open {
   opacity: 0.8;
   visibility: visible;
+}
+.mobile-nav,
+.mobile-nav ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.mobile-nav .submenu {
+  display: none;
+  padding-left: 15px;
+}
+
+.mobile-nav li.open > .submenu {
+  display: block;
+}
+
+.mobile-nav .menu-toggle {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
 }
 
 @media (max-width: 450px) {
