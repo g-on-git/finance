@@ -1,5 +1,5 @@
-@use "_variables.scss" as *;
-@use "_mixins.scss" as *;
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
 
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500&display=swap");
 
@@ -16,7 +16,6 @@ body {
   padding: 0;
   margin: 0;
   overflow-x: hidden;
-  text-transform: capitalize;
 }
 ul {
   padding: 0;
@@ -42,5 +41,5 @@ h6 {
   padding: 0;
   color: $header-color;
   @include transition;
-  text-transform: capitalize;
+  // text-transform: capitalize;
 }

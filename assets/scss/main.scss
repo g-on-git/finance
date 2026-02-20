@@ -1,7 +1,27 @@
-@use "_mixins.scss";
-@use "_variables.scss";
+/* ===============================
+   Abstracts
+================================= */
+@use "./abstracts/variables";
+@use "./abstracts/mixins";
 
-@use "_header.scss";
-@use "_hero.scss";
-@use "_typography.scss";
-@use "_buttons.scss";
+/* ===============================
+   Base
+================================= */
+@use "./base/typography";
+@use "./base/section";
+
+/* ===============================
+   Components
+================================= */
+@use "./components/buttons";
+
+/* ===============================
+   Layout
+================================= */
+@use "./layout/header";
+
+/* ===============================
+   Sections
+================================= */
+@use "./sections/hero";
+@use "./sections/solutions";

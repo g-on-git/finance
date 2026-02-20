@@ -1,5 +1,6 @@
-@use "_variables.scss" as *;
-@use "_mixins.scss" as *;
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
 
 .theme-btn {
   position: relative;
