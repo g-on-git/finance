@@ -38,4 +38,39 @@
       });
     }
   });
+
+  //>> Service Slider Start <<//
+  if ($(".service-slider-3").length > 0) {
+    const ServiceSlider3 = new Swiper(".service-slider-3", {
+      spaceBetween: 30,
+      speed: 1500,
+      loop: true,
+      autoplay: {
+        delay: 2000,
+        disableOnInteraction: true,
+      },
+
+      navigation: {
+        nextEl: ".arrow-prev",
+        prevEl: ".arrow-next",
+      },
+      breakpoints: {
+        1199: {
+          slidesPerView: 3,
+        },
+        991: {
+          slidesPerView: 2,
+        },
+        767: {
+          slidesPerView: 2,
+        },
+        575: {
+          slidesPerView: 2,
+        },
+        0: {
+          slidesPerView: 1,
+        },
+      },
+    });
+  }
 })(jQuery);

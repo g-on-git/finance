@@ -17,7 +17,7 @@
   .sub-title {
     font-size: 16px;
     font-weight: 400;
-    // color: $text-color-2;
+    color: $theme-color;
     font-family: $heading-font;
     margin-bottom: 20px;
     text-transform: uppercase;
@@ -25,7 +25,6 @@
     border: 1.9px solid $border-color;
     padding: 10px 20px;
     border-radius: 100px;
-    padding-left: 25px;
     display: inline-block;
     position: relative;
   }
