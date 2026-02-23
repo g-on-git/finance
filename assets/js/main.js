@@ -23,7 +23,7 @@
 
     if ($(".hero-slider").length) {
       const heroSlider = new Swiper(".hero-slider", {
-        loop: true,
+        loop: false,
         slidesPerView: 1,
         effect: "fade",
         speed: 3000,
@@ -43,10 +43,10 @@
   if ($(".service-slider-3").length > 0) {
     const ServiceSlider3 = new Swiper(".service-slider-3", {
       spaceBetween: 30,
-      speed: 1500,
+      speed: 2000,
       loop: true,
       autoplay: {
-        delay: 2000,
+        delay: 1500,
         disableOnInteraction: true,
       },
 
@@ -66,6 +66,40 @@
         },
         575: {
           slidesPerView: 2,
+        },
+        0: {
+          slidesPerView: 1,
+        },
+      },
+    });
+  }
+
+  if ($(".testimonial-slider-2").length > 0) {
+    const TestimonialSlider2 = new Swiper(".testimonial-slider-2", {
+      spaceBetween: 30,
+      speed: 1300,
+      loop: true,
+      centeredSlides: true,
+      autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+      },
+      navigation: {
+        nextEl: ".array-prev",
+        prevEl: ".array-next",
+      },
+      breakpoints: {
+        1199: {
+          slidesPerView: 1,
+        },
+        991: {
+          slidesPerView: 1,
+        },
+        767: {
+          slidesPerView: 1,
+        },
+        575: {
+          slidesPerView: 1,
         },
         0: {
           slidesPerView: 1,

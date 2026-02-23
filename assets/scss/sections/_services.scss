@@ -12,44 +12,21 @@
     @include flex;
     justify-content: flex-end;
 
-    .arrow {
-      @include flex;
-      justify-content: center;
-      width: 80px;
-      height: 80px;
-      line-height: 85px;
-      text-align: center;
-    }
-
-    .arrow-prev {
-      background-color: transparent;
-      border: 1px solid $theme-color-2;
-      color: $theme-color-2;
-      @include transition;
-      font-size: 24px;
-
-      img {
-        width: 42px;
-        height: 42px;
-      }
-    }
-
-    .arrow-next {
-      background-color: $theme-color;
-      //   color: $theme-color;
-      @include transition;
-      font-size: 24px;
-      border: none;
-
-      img {
-        width: 42px;
-        height: 42px;
-      }
+    @include breakpoint(max-lg) {
+      justify-content: start;
     }
   }
 
   .service-slider-3 {
     margin-right: -390px;
+    .swiper-wrapper {
+      align-items: stretch;
+    }
+
+    .swiper-slide {
+      height: auto;
+      @include flex;
+    }
 
     @include breakpoint(max-xxxl) {
       margin-right: -150px;
@@ -62,7 +39,7 @@
 }
 
 .service-card-items-3 {
-  //   @include flex;
+  @include flex;
   border-radius: 20px;
   background-color: $white;
   margin-top: 30px;
@@ -77,6 +54,9 @@
 
   .service-content {
     padding: 40px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 
     @include breakpoint(max-xxl) {
       padding: 0;

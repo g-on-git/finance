@@ -1,0 +1,296 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.testimonial-wrapper-3 {
+  .testimonial-item-3 {
+    position: relative;
+
+    .testimonial-image {
+      max-width: 500px;
+      position: relative;
+
+      @include breakpoint(max-xxl) {
+        max-width: initial;
+      }
+
+      img {
+        @include imgw;
+        border-radius: 20px;
+      }
+    }
+
+    .testimonial-box {
+      background-color: $white;
+      border: 1px solid $border-color;
+      border-radius: 20px;
+      padding: 30px 32px;
+      box-shadow: 0px 5px 12px 0px rgba(0, 0, 0, 0.05);
+      position: absolute;
+      right: 29px;
+      bottom: -104px;
+      width: 500px;
+
+      @include breakpoint(max-xxl) {
+        width: initial;
+        padding: 30px;
+        right: 0;
+        bottom: 0;
+        position: static;
+        margin-top: 30px;
+      }
+
+      .testimonial-content {
+        .star {
+          color: $theme-color;
+          margin-bottom: 20px;
+        }
+
+        p {
+          max-width: 420px;
+          margin-bottom: 30px;
+          line-height: 1.2;
+          font-weight: 300;
+        }
+      }
+
+      .array-button {
+        position: absolute;
+        right: 40px;
+        bottom: 40px;
+        @include flex;
+        gap: 10px;
+        z-index: 9999;
+        background-color: $white;
+
+        .array-prev {
+          width: 30px;
+          height: 30px;
+          line-height: 30px;
+          text-align: center;
+          border-radius: 100px;
+          background-color: $theme-color;
+          color: $theme-color-2;
+          @include transition;
+          font-size: 12px;
+          z-index: 999;
+
+          &:hover {
+            background-color: $theme-color-2;
+            color: $white;
+          }
+        }
+
+        .array-next {
+          width: 30px;
+          height: 30px;
+          line-height: 30px;
+          text-align: center;
+          border-radius: 100px;
+          background-color: $theme-color-2;
+          color: $white;
+          @include transition;
+          font-size: 12px;
+          z-index: 999;
+
+          &:hover {
+            background-color: $theme-color;
+            color: $theme-color-2;
+          }
+        }
+      }
+
+      .arrow-button {
+        position: absolute;
+        right: 40px;
+        bottom: 40px;
+        @include flex;
+        gap: 10px;
+      }
+    }
+  }
+
+  .testimonial-content {
+    .section-title {
+      align-items: flex-start;
+      margin-bottom: 2rem;
+    }
+
+    .text {
+      margin-top: 20px;
+      margin-bottom: 40px;
+    }
+
+    // .testimonial-count-box {
+    //   @include flex;
+    //   justify-content: space-between;
+    //   margin-top: 50px;
+    //   position: relative;
+
+    //   @include breakpoint(max-xxl) {
+    //     flex-wrap: wrap;
+    //     gap: 30px;
+    //   }
+
+    //   .box {
+    //     padding: 20px 30px;
+    //     background-color: #f7f7f7;
+    //     border-radius: 10px;
+    //     position: relative;
+
+    //     @include breakpoint(max-xxl) {
+    //       width: 200px;
+    //     }
+
+    //     &::before {
+    //       content: "";
+    //       position: absolute;
+    //       top: 0;
+    //       left: 0;
+    //       width: 100%;
+    //       height: 0%;
+    //       background: $theme-color;
+    //       border-radius: 10px;
+    //       z-index: 1;
+    //       transition: height 0.5s ease;
+    //     }
+
+    //     .icon {
+    //       width: 50px;
+    //       height: 50px;
+    //       line-height: 50px;
+    //       border-radius: 100px;
+    //       text-align: center;
+    //       background-color: $white;
+    //       margin-bottom: 20px;
+    //       @include transition;
+
+    //       img {
+    //         @include transition;
+    //         display: inline-block;
+    //       }
+    //     }
+
+    //     h2 {
+    //       font-size: 40px;
+    //       margin-bottom: 10px;
+    //     }
+
+    //     h6 {
+    //       font-weight: 400;
+    //     }
+
+    //     &:hover {
+    //       &::before {
+    //         height: 100%;
+    //       }
+
+    //       .icon {
+    //         background-color: $theme-color-2;
+    //         color: $white;
+    //         position: relative;
+    //         z-index: 999;
+
+    //         img {
+    //           filter: brightness(0) invert(1);
+    //           transform: scaleX(-1) !important;
+    //         }
+    //       }
+
+    //       h2 {
+    //         color: $theme-color-2;
+    //         position: relative;
+    //         z-index: 999;
+    //       }
+
+    //       h6 {
+    //         color: $theme-color-2;
+    //         position: relative;
+    //         z-index: 999;
+    //       }
+    //     }
+    //   }
+    // }
+
+    .counter-main-item {
+      margin-top: 80px;
+      position: relative;
+
+      @include breakpoint(max-xxl) {
+        margin-top: 50px;
+      }
+
+      &::before {
+        position: absolute;
+        content: "";
+        background-color: $border-color;
+        width: 0.5px;
+        height: 260px;
+        top: 0px;
+        left: 45%;
+
+        // @include breakpoint(max-xxl) {
+        //   display: none;
+        // }
+      }
+
+      .counter-item {
+        @include flex;
+        gap: 120px;
+        border-bottom: 1px solid $border-color;
+        padding-bottom: 30.5px;
+        margin-bottom: 30px;
+        width: 100%;
+        justify-content: space-around;
+
+        @include breakpoint(max-xxl) {
+          gap: 50px;
+          //   flex-wrap: wrap;
+          //   width: 310px;
+        }
+
+        &.style-border {
+          border-bottom: none;
+          padding-bottom: 0;
+          margin-bottom: 0;
+        }
+
+        .content {
+          flex-basis: 100%;
+          width: 200px;
+
+          @include breakpoint(max-xxl) {
+            flex-basis: initial;
+          }
+
+          h2 {
+            font-size: 57px;
+
+            @include breakpoint(max-xxl) {
+              font-size: 50px;
+            }
+          }
+
+          p {
+            font-size: 16px;
+            font-weight: 400;
+            color: $header-color;
+
+            @include breakpoint(max-xxl) {
+              font-size: 16px;
+            }
+          }
+
+          &.style-2 {
+            h2 {
+              color: $theme-color;
+            }
+
+            p {
+              color: $theme-color;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,55 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+.cta-section {
+  position: relative;
+  overflow: hidden;
+  background-color: #020d2b;
+  .left-circle,
+  .right-circle {
+    position: absolute;
+  }
+  .left-circle {
+    top: -14rem;
+    left: -21rem;
+    @include breakpoint(lg) {
+      top: -4rem;
+      left: -8rem;
+    }
+  }
+  .right-circle {
+    bottom: -14rem;
+    right: -18rem;
+    @include breakpoint(lg) {
+      bottom: -4rem;
+      right: -8rem;
+    }
+  }
+  .content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .section-title {
+      .sub-title {
+        color: $white;
+      }
+
+      h2 {
+        color: $white;
+        margin-bottom: 2rem;
+        font-size: 57px;
+      }
+      @include breakpoint(lg) {
+        h2 {
+          width: 629px;
+
+          //   font-size: 57px;
+        }
+      }
+    }
+    p {
+      color: $white;
+      margin-bottom: 3rem;
+    }
+  }
+}

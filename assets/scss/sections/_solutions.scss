@@ -3,6 +3,14 @@
 
 .solutions-section {
   margin-top: 60px;
+
+  .section-title {
+    @include breakpoint(lg) {
+      h2 {
+        width: 629px;
+      }
+    }
+  }
 }
 
 .solutions-wrapper {
