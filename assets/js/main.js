@@ -5,12 +5,6 @@
   const $window = $(window);
 
   $documentOn.ready(function () {
-    // Clone main menu into mobile menu
-    // if ($("#mobile-menu").length) {
-    //   let mobileMenuContent = $("#mobile-menu").html();
-    //   $(".mobile-menu").html(mobileMenuContent);
-    // }
-
     //>> Sidebar Toggle Js Start <<//
     $(".offcanvas__close,.offcanvas__overlay").on("click", function () {
       $(".offcanvas__info").removeClass("info-open");
@@ -37,6 +31,15 @@
         },
       });
     }
+
+    //>> Sticky Header Js Start <<//
+    $window.on("scroll", function () {
+      if ($(this).scrollTop() > 250) {
+        $("#header-sticky").addClass("sticky");
+      } else {
+        $("#header-sticky").removeClass("sticky");
+      }
+    });
   });
 
   //>> Service Slider Start <<//

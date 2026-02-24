@@ -509,69 +509,6 @@
       }
     }
   }
-
-  &.header-2 {
-    position: relative;
-    z-index: 9999;
-
-    &::before {
-      @include before;
-      background-color: $theme-color-2;
-      width: 387px;
-      clip-path: polygon(0 0, 79% 0, 100% 100%, 0% 100%);
-      z-index: -1;
-
-      @include breakpoint(max-xxl) {
-        display: none;
-      }
-    }
-
-    .header-main {
-      .header-left {
-        .logo {
-          @include breakpoint(max-xxl) {
-            .header-logo {
-              display: none;
-            }
-          }
-
-          .header-logo-2 {
-            display: none;
-
-            @include breakpoint(max-xxl) {
-              display: block;
-            }
-          }
-        }
-      }
-    }
-
-    &.header-3 {
-      background-color: $bg-color;
-
-      &::before {
-        background-color: $theme-color;
-      }
-
-      .header-main {
-        .header-left {
-          .logo {
-            @include breakpoint(max-xxl) {
-              .header-logo {
-                display: block;
-              }
-            }
-          }
-        }
-      }
-
-      &.header-inner {
-        &::before {
-          display: none;
-        }
-      }
-    }
-  }
 }
 
 //>>>>> Header 01 Start <<<<<//

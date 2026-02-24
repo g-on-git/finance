@@ -19,6 +19,7 @@
    Layout
 ================================= */
 @use "./layout/header";
+@use "./layout/footer";
 
 /* ===============================
    Sections
@@ -28,4 +29,3 @@
 @use "./sections/services";
 @use "./sections/testimonial";
 @use "./sections/cta";
-@use "./sections/footer";
