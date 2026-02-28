@@ -152,11 +152,12 @@
                     <a href="about.html">Services</a>
                     <ul class="submenu">
                       <li>
-                        <a href="">Service Details</a>
+                        <a href="">Service Overview</a>
                       </li>
                       <li>
-                        <a href="">Case Study</a>
+                        <a href="">Service Details</a>
                       </li>
+
                       <li>
                         <a href="">Case Study</a>
                       </li>
@@ -335,187 +336,188 @@
                           >
                         </li>
 
-                        <!-- Services -->
+                        <!-- Services (Mobile Offcanvas Dropdown) -->
                         <li class="nav-item">
-                          <a href="about.html" class="nav-link">
-                            <img
-                              class="nav-icon"
-                              src="assets/icons/briefcase.svg"
-                              alt="close"
-                            />
-                            Services</a
-                          >
-                        </li>
-
-                        <!-- Pages -->
-                        <li class="nav-item">
-                          <a
-                            class="nav-link"
+                          <button
+                            class="nav-link w-100 d-flex align-items-center justify-content-between"
+                            type="button"
                             data-bs-toggle="collapse"
-                            href="#pagesCollapse"
-                            role="button"
+                            data-bs-target="#mobileServices"
                             aria-expanded="false"
+                            aria-controls="mobileServices"
                           >
-                            <img
-                              class="nav-icon"
-                              src="assets/icons/pages.svg"
-                              alt="close"
-                            />
-                            Pages
+                            <span class="d-flex align-items-center gap-2">
+                              <img
+                                class="nav-icon"
+                                src="assets/icons/briefcase.svg"
+                                alt="services"
+                              />
+                              Services
+                            </span>
+
+                            <!-- caret icon (optional) -->
                             <img
                               class="chevron-down"
                               src="assets/icons/chevron-down.svg"
                               alt="close"
                             />
+                          </button>
+
+                          <div class="collapse" id="mobileServices">
+                            <ul class="list-unstyled ps-4 pt-2 pb-2">
+                              <li class="nav-item">
+                                <a class="nav-link py-1" href="services.html"
+                                  >Service Overview</a
+                                >
+                              </li>
+                              <li class="nav-item">
+                                <a
+                                  class="nav-link py-1"
+                                  href="service-details.html"
+                                  >Service Details</a
+                                >
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link py-1" href="case-study.html"
+                                  >Case Study</a
+                                >
+                              </li>
+                            </ul>
+                          </div>
+                        </li>
+
+                        <!-- Pages -->
+                        <li class="nav-item">
+                          <a
+                            class="nav-link d-flex justify-content-between align-items-center"
+                            data-bs-toggle="collapse"
+                            href="#pagesCollapse"
+                            role="button"
+                            aria-expanded="false"
+                          >
+                            <span class="d-flex align-items-center gap-2">
+                              <img
+                                class="nav-icon"
+                                src="assets/icons/pages.svg"
+                                alt="pages"
+                              />
+                              Pages
+                            </span>
+                            <i class="fas fa-angle-down"></i>
                           </a>
+
                           <div class="collapse" id="pagesCollapse">
                             <ul class="navbar-nav ps-3">
-                              <!-- Cause -->
+                              <!-- Company Pages -->
                               <li class="nav-item">
                                 <a
-                                  class="nav-link"
+                                  class="nav-link d-flex justify-content-between"
                                   data-bs-toggle="collapse"
-                                  href="#causeCollapse"
+                                  href="#companyCollapse"
                                   role="button"
                                   aria-expanded="false"
                                 >
-                                  Cause <i class="fas fa-angle-down"></i>
+                                  Company Pages
+                                  <i class="fas fa-angle-down"></i>
                                 </a>
-                                <div class="collapse" id="causeCollapse">
+
+                                <div class="collapse" id="companyCollapse">
                                   <ul class="navbar-nav ps-3">
                                     <li class="nav-item">
-                                      <a href="project.html" class="nav-link"
-                                        >Our Cause</a
+                                      <a href="team.html" class="nav-link"
+                                        >Team</a
                                       >
                                     </li>
                                     <li class="nav-item">
                                       <a
-                                        href="project-details.html"
+                                        href="testimonials.html"
                                         class="nav-link"
-                                        >Cause Details</a
+                                        >Testimonials</a
+                                      >
+                                    </li>
+                                    <li class="nav-item">
+                                      <a href="pricing.html" class="nav-link"
+                                        >Pricing</a
                                       >
                                     </li>
                                   </ul>
                                 </div>
                               </li>
 
-                              <!-- Volunteer -->
+                              <!-- Utility Pages -->
                               <li class="nav-item">
                                 <a
-                                  class="nav-link"
+                                  class="nav-link d-flex justify-content-between"
                                   data-bs-toggle="collapse"
-                                  href="#volunteerCollapse"
+                                  href="#utilityCollapse"
                                   role="button"
                                   aria-expanded="false"
                                 >
-                                  Volunteer <i class="fas fa-angle-down"></i>
+                                  Utility Pages
+                                  <i class="fas fa-angle-down"></i>
                                 </a>
-                                <div class="collapse" id="volunteerCollapse">
+
+                                <div class="collapse" id="utilityCollapse">
                                   <ul class="navbar-nav ps-3">
                                     <li class="nav-item">
-                                      <a
-                                        href="become-volounteer.html"
-                                        class="nav-link"
-                                        >Become Volunteer</a
+                                      <a href="404.html" class="nav-link"
+                                        >404</a
                                       >
                                     </li>
                                     <li class="nav-item">
-                                      <a href="volounteer.html" class="nav-link"
-                                        >Volunteer</a
+                                      <a href="login.html" class="nav-link"
+                                        >Login</a
+                                      >
+                                    </li>
+                                    <li class="nav-item">
+                                      <a href="register.html" class="nav-link"
+                                        >Register</a
                                       >
                                     </li>
                                     <li class="nav-item">
                                       <a
-                                        href="volounteer-details.html"
+                                        href="coming-soon.html"
                                         class="nav-link"
-                                        >Volunteer Details</a
+                                        >Coming Soon</a
                                       >
                                     </li>
                                   </ul>
                                 </div>
                               </li>
 
-                              <!-- Event -->
+                              <!-- Support -->
                               <li class="nav-item">
                                 <a
-                                  class="nav-link"
+                                  class="nav-link d-flex justify-content-between"
                                   data-bs-toggle="collapse"
-                                  href="#eventCollapse"
+                                  href="#supportCollapse"
                                   role="button"
                                   aria-expanded="false"
                                 >
-                                  Event <i class="fas fa-angle-down"></i>
+                                  Support <i class="fas fa-angle-down"></i>
                                 </a>
-                                <div class="collapse" id="eventCollapse">
+
+                                <div class="collapse" id="supportCollapse">
                                   <ul class="navbar-nav ps-3">
                                     <li class="nav-item">
-                                      <a href="event.html" class="nav-link"
-                                        >Our Event</a
-                                      >
-                                    </li>
-                                    <li class="nav-item">
-                                      <a href="event-list.html" class="nav-link"
-                                        >Event List</a
-                                      >
-                                    </li>
-                                    <li class="nav-item">
                                       <a
-                                        href="event-details.html"
+                                        href="appointment.html"
                                         class="nav-link"
-                                        >Event Details</a
+                                        >Appointment</a
+                                      >
+                                    </li>
+                                    <li class="nav-item">
+                                      <a href="faq.html" class="nav-link"
+                                        >FAQ</a
+                                      >
+                                    </li>
+                                    <li class="nav-item">
+                                      <a href="contact.html" class="nav-link"
+                                        >Contact</a
                                       >
                                     </li>
                                   </ul>
                                 </div>
-                              </li>
-
-                              <!-- Donation -->
-                              <li class="nav-item">
-                                <a
-                                  class="nav-link"
-                                  data-bs-toggle="collapse"
-                                  href="#donationCollapse"
-                                  role="button"
-                                  aria-expanded="false"
-                                >
-                                  Donation <i class="fas fa-angle-down"></i>
-                                </a>
-                                <div class="collapse" id="donationCollapse">
-                                  <ul class="navbar-nav ps-3">
-                                    <li class="nav-item">
-                                      <a href="donation.html" class="nav-link"
-                                        >Our Donation</a
-                                      >
-                                    </li>
-                                    <li class="nav-item">
-                                      <a
-                                        href="donation-now.html"
-                                        class="nav-link"
-                                        >Donation Now</a
-                                      >
-                                    </li>
-                                    <li class="nav-item">
-                                      <a
-                                        href="donation-details.html"
-                                        class="nav-link"
-                                        >Donation Details</a
-                                      >
-                                    </li>
-                                  </ul>
-                                </div>
-                              </li>
-
-                              <!-- Other Pages -->
-                              <li class="nav-item">
-                                <a href="pricing.html" class="nav-link"
-                                  >Our Pricing</a
-                                >
-                              </li>
-                              <li class="nav-item">
-                                <a href="faq.html" class="nav-link">FAQ</a>
-                              </li>
-                              <li class="nav-item">
-                                <a href="404.html" class="nav-link">404 Page</a>
                               </li>
                             </ul>
                           </div>
