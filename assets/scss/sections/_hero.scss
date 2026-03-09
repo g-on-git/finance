@@ -19,11 +19,7 @@
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(
-      to left,
-      rgba(31, 79, 216, 0.35) 36%,
-      rgb(4 13 35) 101%
-    );
+    background: $linear-bg;
     z-index: -1;
   }
 

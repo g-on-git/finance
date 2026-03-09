@@ -1,0 +1,39 @@
+.about-section {
+  .left-item {
+    .section-title {
+      align-items: flex-start;
+    }
+
+    p {
+      margin-top: 22px;
+    }
+
+    .about-main-item {
+      h4 {
+        margin-bottom: 2rem;
+      }
+
+      .about-item {
+        margin-bottom: 2rem;
+        max-width: 300px;
+        .about-icon {
+          margin-bottom: 1.5rem;
+        }
+        p {
+          margin: 8px 0;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+
+  .right-item {
+    height: 100%;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 20px;
+    }
+  }
+}

@@ -1,0 +1,132 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../base/typography" as *;
+
+.team-section {
+  .section-title {
+    h2 {
+      text-align: center;
+    }
+  }
+
+  .team-container {
+    margin-top: 5rem;
+
+    .team-card {
+      background-color: $bg-color;
+      border: 1px solid $border-color;
+      border-radius: 20px;
+      overflow: hidden;
+
+      .team-img {
+        height: 334px;
+
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+          border-radius: 20px 20px 0 0;
+          display: block;
+          transition: transform 0.4s ease;
+        }
+      }
+
+      .team-content {
+        padding: 15px;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+
+        h5,
+        p,
+        .social-icon {
+          position: relative;
+          z-index: 2;
+        }
+
+        h5 {
+          transition: color 0.4s ease;
+        }
+
+        p {
+          font-size: 12px;
+          font-weight: 300;
+          transition: color 0.4s ease;
+        }
+
+        .social-icon {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          margin-top: 12px;
+          transition: all 0.4s ease;
+
+          .icon {
+            width: 20px;
+            height: 20px;
+            min-width: 20px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            transition: all 0.3s ease;
+          }
+
+          .facebook {
+            background-image: url("/assets/icons/facebook-blue.svg");
+          }
+
+          .instagram {
+            background-image: url("/assets/icons/instagram-blue.svg");
+          }
+
+          .twitter {
+            background-image: url("/assets/icons/twitter-blue.svg");
+          }
+        }
+
+        &::before {
+          @include before;
+          border-radius: 0 0 20px 20px;
+          background-color: $theme-color;
+          z-index: 1;
+          transform: translateY(100%);
+          transition: transform 0.4s ease;
+        }
+      }
+
+      &:hover {
+        .team-img img {
+          transform: scale(1.05);
+        }
+
+        .team-content {
+          &::before {
+            transform: translateY(0);
+          }
+
+          h5,
+          p {
+            color: $white;
+          }
+
+          .social-icon {
+            .facebook {
+              background-image: url("/assets/icons/facebook.svg");
+            }
+
+            .instagram {
+              background-image: url("/assets/icons/instagram.svg");
+            }
+
+            .twitter {
+              background-image: url("/assets/icons/twitter.svg");
+            }
+          }
+        }
+      }
+    }
+  }
+}
