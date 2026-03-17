@@ -1,0 +1,99 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../base/typography" as *;
+
+.service-details-section {
+  .categories-container {
+    background-color: $bg-color-xlight;
+    padding: 30px;
+    border-radius: 10px;
+
+    .categories-content {
+      margin-top: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      .category {
+        display: flex;
+        justify-content: space-between;
+        background-color: $white;
+        border-radius: 5px;
+        padding: 20px;
+      }
+    }
+  }
+
+  .quick-facts-container {
+    margin-top: 2rem;
+    .divider {
+      margin: 1rem 0 1rem;
+      width: 100%;
+      height: 4px;
+      background-color: $bg-color-xlight;
+      border-radius: 2px;
+      overflow: hidden;
+
+      .divider-progress {
+        width: 20%;
+        height: 100%;
+        background-color: $theme-color;
+      }
+    }
+
+    .quick-facts-content {
+      .fact-widget {
+        border-bottom: 1px solid $border-color;
+        display: flex;
+        gap: 20px;
+        padding: 25px 0 25px;
+        .fact-content {
+          margin: auto 0;
+          min-width: 0;
+          p {
+            font-weight: 300;
+          }
+        }
+      }
+    }
+  }
+}
+
+.support-widget {
+  .support-content {
+    img {
+      margin-bottom: 2rem;
+    }
+    h5,
+    p {
+      color: $white;
+    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 30px;
+
+    .theme-btn {
+      margin-top: 3rem;
+    }
+  }
+}
+
+.service-overview {
+  img {
+    width: 100%;
+    height: 385px;
+    object-fit: cover;
+    display: block;
+  }
+}
+
+.work-with-us {
+  margin-top: 2rem;
+  .work-detail {
+    padding: 30px;
+    background-color: $white;
+    border-left: 3px solid $theme-color;
+    border-radius: 10px;
+    box-shadow: $shadow;
+  }
+}

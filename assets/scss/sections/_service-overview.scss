@@ -1,0 +1,61 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../base/typography" as *;
+
+.how-it-works {
+  .section-title {
+    align-items: flex-start;
+  }
+
+  .work-card {
+    background-color: $bg-color;
+    border-radius: 20px;
+    border: 1px solid $border-color;
+    padding: 20px;
+    @include flex;
+    justify-content: center;
+    flex-direction: column;
+    .work-img {
+      img {
+        width: 100%;
+        border-radius: 10px;
+      }
+    }
+
+    .work-content {
+      color: $text-color;
+      text-align: center;
+      h5 {
+        margin: 1rem 0 1rem;
+      }
+    }
+  }
+}
+
+.cta {
+  .cta-card {
+    background-color: $bg-color-xlight;
+    padding: 30px;
+    border-radius: 20px;
+    .left {
+      @include flex;
+      flex-direction: column;
+      align-items: normal;
+      justify-content: center;
+      h5 {
+        font-size: 32px;
+      }
+      .cta-btns {
+        @include flex;
+        gap: 10px;
+      }
+    }
+
+    .cta-img {
+      img {
+        width: 100%;
+        border-radius: 10px;
+      }
+    }
+  }
+}
