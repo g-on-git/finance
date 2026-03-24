@@ -54,37 +54,36 @@
           transition: color 0.4s ease;
         }
 
-        .social-icon {
-          display: flex;
-          align-items: center;
-          gap: 10px;
-          margin-top: 12px;
-          transition: all 0.4s ease;
+        // .social-icon {
+        //   display: flex;
+        //   align-items: center;
+        //   gap: 10px;
+        //   margin-top: 12px;
+        //   transition: all 0.4s ease;
 
-          .icon {
-            width: 20px;
-            height: 20px;
-            min-width: 20px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
-            transition: all 0.3s ease;
-          }
+        //   .icon {
+        //     width: 20px;
+        //     height: 20px;
+        //     min-width: 20px;
+        //     display: inline-flex;
+        //     align-items: center;
+        //     justify-content: center;
+        //     background-size: contain;
+        //     background-repeat: no-repeat;
+        //     background-position: center;
+        //     transition: all 0.3s ease;
+        //   }
+        // }
+        .facebook {
+          background-image: url("/assets/icons/facebook-blue.svg");
+        }
 
-          .facebook {
-            background-image: url("/assets/icons/facebook-blue.svg");
-          }
+        .instagram {
+          background-image: url("/assets/icons/instagram-blue.svg");
+        }
 
-          .instagram {
-            background-image: url("/assets/icons/instagram-blue.svg");
-          }
-
-          .twitter {
-            background-image: url("/assets/icons/twitter-blue.svg");
-          }
+        .twitter {
+          background-image: url("/assets/icons/twitter-blue.svg");
         }
 
         &::before {
@@ -126,6 +125,98 @@
             }
           }
         }
+      }
+    }
+  }
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 12px;
+  transition: all 0.4s ease;
+
+  .icon {
+    min-width: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all 0.3s ease;
+  }
+}
+.facebook {
+  background-image: url("/assets/icons/facebook.svg");
+}
+
+.instagram {
+  background-image: url("/assets/icons/instagram.svg");
+}
+
+.twitter {
+  background-image: url("/assets/icons/twitter.svg");
+}
+
+.team-2 {
+  align-items: flex-start;
+  h2 {
+    text-align: start !important;
+  }
+}
+
+.team-container-2 {
+  .team-card-2 {
+    .team-card-img {
+      height: 500px;
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      // ✅ Gradient overlayzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+      &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          12deg,
+          rgb(1 21 77 / 72%) 0%,
+          rgb(75 103 179 / 0%) 100%
+        );
+        z-index: 1;
+      }
+
+      // ✅ Make sure icons are above gradient
+      .social-icon {
+        position: absolute;
+        bottom: 1rem;
+        right: 2rem;
+        z-index: 2; // VERY IMPORTANT
+
+        display: flex;
+        gap: 5px;
+
+        .icon {
+          background-color: rgb(4 6 35 / 45%);
+          padding: 20px;
+          border-radius: 50px;
+          background-size: auto;
+        }
+      }
+    }
+
+    .team-content-2 {
+      h5 {
+        margin: 1rem 0 0;
       }
     }
   }

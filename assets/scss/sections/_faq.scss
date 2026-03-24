@@ -19,7 +19,7 @@
           line-height: 1;
           font-weight: 400;
           box-shadow: none;
-          border-radius: 20px !important;
+          // border-radius: 20px !important;
           padding: 29px 30px;
           color: $header-color;
           cursor: pointer;
@@ -52,7 +52,7 @@
     }
 
     .accordion-button {
-      background-color: transparent;
+      background-color: $bg-color-xlight;
       color: $header-color;
       border-radius: 5px !important;
 

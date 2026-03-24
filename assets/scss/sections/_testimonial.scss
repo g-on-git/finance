@@ -294,3 +294,193 @@
     }
   }
 }
+
+.testimonial-wrapper-2 {
+  position: relative;
+
+  .testimonial-content {
+    .section-title {
+      display: block;
+      h2 {
+        font-size: 50px;
+
+        @include breakpoint(max-xxl) {
+          font-size: 50px;
+        }
+
+        @include breakpoint(max-xl) {
+          font-size: 40px;
+        }
+
+        @include breakpoint(max-lg) {
+          font-size: 40px;
+        }
+
+        @include breakpoint(max-md) {
+          font-size: 35px;
+        }
+
+        @include breakpoint(max-sm) {
+          font-size: 30px;
+        }
+
+        @include breakpoint(max-xxs) {
+          font-size: 25px;
+        }
+      }
+    }
+
+    .text {
+      max-width: 533px;
+      margin-top: 20px;
+    }
+
+    .theme-btn {
+      background-color: $theme-color;
+      color: $theme-color-2;
+      margin-top: 40px;
+
+      &::before {
+        background-color: $theme-color-2;
+      }
+
+      &:hover {
+        color: $white;
+      }
+    }
+  }
+
+  .testimonial-items {
+    @include breakpoint(max-lg) {
+      padding-bottom: 35px;
+    }
+
+    .testimonial-box {
+      background-color: $white;
+      box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.1);
+      border-radius: 20px;
+      padding: 60px 40px;
+      max-width: 600px;
+
+      @include breakpoint(max-xxl) {
+        padding: 30px;
+      }
+
+      .top-item {
+        @include flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+
+        @include breakpoint(max-xxl) {
+          flex-wrap: wrap;
+          gap: 30px;
+        }
+
+        .star {
+          color: $theme-color;
+        }
+      }
+
+      p {
+        max-width: 446px;
+
+        @include breakpoint(max-sm) {
+          font-size: 14px;
+        }
+      }
+
+      .client-info {
+        @include flex;
+        gap: 20px;
+        margin-top: 30px;
+        img {
+          width: 60px;
+          height: 60px;
+          object-fit: cover;
+        }
+        h5 {
+          margin-bottom: 0;
+        }
+        span {
+          font-weight: 300;
+        }
+
+        @include breakpoint(max-sm) {
+          gap: 12px;
+        }
+
+        h5 {
+          @include breakpoint(max-sm) {
+            font-size: 16px;
+          }
+        }
+
+        span {
+          @include breakpoint(max-sm) {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+
+    #slider {
+      position: relative;
+      width: 70%;
+      height: 357px;
+      margin: 0px auto;
+      font-family: sans-serif;
+      perspective: 1200px;
+      transform-style: preserve-3d;
+
+      @include breakpoint(max-xxl) {
+        margin: 0px auto;
+      }
+
+      @include breakpoint(max-lg) {
+        height: 260px;
+        margin: 0px auto;
+      }
+
+      @include breakpoint(max-md) {
+        height: 330px;
+      }
+
+      input[type="radio"] {
+        display: none;
+      }
+
+      label {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 0;
+        cursor: pointer;
+        transition: transform 400ms ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      #s1:checked ~ #slide1,
+      #s2:checked ~ #slide2,
+      #s3:checked ~ #slide3 {
+        transform: translate3d(0%, 0, 0px);
+        z-index: 3;
+      }
+
+      #s1:checked ~ #slide2,
+      #s2:checked ~ #slide3,
+      #s3:checked ~ #slide1 {
+        transform: translate3d(15%, 0, -100px);
+        z-index: 2;
+      }
+
+      #s1:checked ~ #slide3,
+      #s2:checked ~ #slide1,
+      #s3:checked ~ #slide2 {
+        transform: translate3d(-15%, 0, -100px);
+        z-index: 1;
+      }
+    }
+  }
+}
